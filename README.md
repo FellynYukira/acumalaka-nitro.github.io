@@ -1,4 +1,4 @@
-# FNF': Vs Acumalaka | Cat Discord Nitro
+# FNF': Vs Acumalaka | Acumalaka Nitro
 
 <img src="src/images/discord_frogg.png" width="150">
 
@@ -10,7 +10,7 @@
 
 <img src="src/images/fnf_bump.png" width="340">
 
-### This website is about discord redeem codes, then used for this mod in discord stage
+### This website is about discord redeem codes, then used for this mod in Discord stage
 
 ### Have fun XD
 
