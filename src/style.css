@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'DiscordFont-semibold';
+    src: url('fonts/gg-sans-Semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DiscordFont-bold';
+    src: url('fonts/gg-sans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DiscordFont-regular';
+    src: url('fonts/gg-sans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DiscordFont-medium';
+    src: url('fonts/gg-sans-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.background-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('images/background.png');
+}
+
+.background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'DiscordFont-semibold', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.flipX {
+    transform: scaleX(-1);
+}
+
+.title-redeem {
+    display: inline-flex;
+    align-items: center;
+}
+
+.title-logo {
+    font-family: 'DiscordFont-bold', sans-serif;
+    border-radius: 5px;
+}
+
+.frogg-logo {
+    width: 100px;
+    padding-right: 10px;
+}
+
+.discord-redeem {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #2C2F33;
+    color: #ffffff;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #7289DA;
+}
+
+h6 {
+    margin-bottom: 0px;
+    color: #6b737c
+}
+
+a {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #7289DA;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+a:hover {
+    background-color: #677BC4;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 3;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background: #2C2F33;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform: scale(0.8);
+    opacity: 0;
+    animation: popupAnimation 0.2s ease-in-out forwards;
+}
+
+.popup.show {
+    display: flex;
+    animation: showBGPopup 0.2s ease-in-out forwards;
+}
+
+.popup.hide {
+    animation: hideBGPopup 0.2s ease-in-out forwards;
+}
+
+.popup-content.hide {
+    animation: popupHideAnimation 0.2s ease-in-out forwards;
+}
+
+@keyframes popupHideAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes popupAnimation {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes showBGPopup {
+    0% {
+        background: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@keyframes hideBGPopup {
+    0% {
+        background: rgba(0, 0, 0, 0.7);
+    }
+    100% {
+        background: rgba(0, 0, 0, 0);
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 3px;
+    right: 13px;
+    font-size: 30px;
+    cursor: pointer;
+}
