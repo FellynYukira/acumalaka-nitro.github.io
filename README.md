@@ -1,12 +1,10 @@
-<div style="text-align: center;">
-
 # FNF': Vs Acumalaka | Cat Discord Nitro
 
 <img src="src/images/discord_frogg.png" width="150">
 
-<img src="https://dcbadge.vercel.app/api/server/MZQb5eVbuj?style=flat-square" style="padding-top: 10px;">
+![](https://dcbadge.vercel.app/api/server/MZQb5eVbuj?style=flat-square)
 
-[Join Server](https://discord.gg/MZQb5eVbuj)
+[ [Join Server](https://discord.gg/MZQb5eVbuj) ]
 
 ---
 
